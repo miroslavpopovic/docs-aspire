@@ -137,7 +137,7 @@ The preceding code adds three replicas of the "apiservice" project resource to t
 
 ## Reference resources
 
-A reference represents a dependency between resources. For example, you can probably imagine a scenario where you a web frontend depends on a Redis cache. Consider the following example app host `Program` C# code:
+A reference represents a dependency between resources. For example, you can probably imagine a scenario where a web frontend depends on a Redis cache. Consider the following example app host `Program` C# code:
 
 ```csharp
 var builder = DistributedApplication.CreateBuilder(args);
@@ -246,7 +246,7 @@ var cache = builder.AddRedis("cache")
 
 For more information and additional APIs available, see <xref:Aspire.Hosting.ContainerResourceBuilderExtensions#methods>.
 
-#### Container resource lifecycle
+#### Running containers
 
 When the app host is run, the <xref:Aspire.Hosting.ApplicationModel.ContainerResource> is used to determine what container image to create and start. Under the hood, .NET Aspire runs the container using the defined container image by delegating calls to the appropriate OCI-compliant container runtime, either Docker or Podman. The following commands are used:
 
